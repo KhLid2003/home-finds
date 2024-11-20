@@ -1,35 +1,37 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Category } from '../types';
+import { useNavigate } from "react-router-dom";
+import kitchen from "../data/images/kitchen.webp";
+import bathroom from "../data/images/bathroom.webp";
+import bedroom from "../data/images/bedroom.webp";
+import livingroom from "../data/images/livingroom.webp";
 
-const categories: Category[] = [
+const categories = [
   {
-    name: 'Living Room',
-    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7',
-    count: 152
+    name: "Living Room",
+    image: livingroom,
+    count: 152,
   },
   {
-    name: 'Kitchen',
-    image: 'https://images.unsplash.com/photo-1556911220-bff31c812dba',
-    count: 89
+    name: "Kitchen",
+    image: kitchen,
+    count: 89,
   },
   {
-    name: 'Bedroom',
-    image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0',
-    count: 124
+    name: "Bedroom",
+    image: bedroom,
+    count: 124,
   },
   {
-    name: 'Home Office',
-    image: 'https://images.unsplash.com/photo-1486946255434-2466348c2166',
-    count: 76
-  }
+    name: "Bathroom",
+    image: bathroom,
+    count: 76,
+  },
 ];
 
 export default function Categories() {
   const navigate = useNavigate();
 
   const handleCategoryClick = (categoryName: string) => {
-    navigate(`/shop/${categoryName.toLowerCase().replace(' ', '-')}`);
+    navigate(`/shop/${categoryName.toLowerCase().replace(" ", "-")}`);
   };
 
   return (

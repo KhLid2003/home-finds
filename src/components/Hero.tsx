@@ -1,4 +1,4 @@
-import React from 'react';
+import hero from "../data/images/livingroom.webp";
 
 export default function Hero() {
   return (
@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <img
           className="w-full h-full object-cover opacity-60"
-          src="https://images.unsplash.com/photo-1600585154526-990dced4db0d"
+          src={hero}
           alt="Modern living room"
         />
       </div>
@@ -15,8 +15,9 @@ export default function Hero() {
           Transform Your Home
         </h1>
         <p className="mt-6 text-xl text-gray-100 max-w-3xl">
-          Discover curated collections of premium home products that blend style, comfort, and functionality. 
-          Make every corner of your home a testament to modern living.
+          Discover curated collections of premium home products that blend
+          style, comfort, and functionality. Make every corner of your home a
+          testament to modern living.
         </p>
         <div className="mt-10">
           <a
